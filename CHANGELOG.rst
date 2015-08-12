@@ -3,6 +3,16 @@
 2015-08-12
 ----------
 
+Version 0.4
+
+* Fixed cache plugin setting in order for paginator to work properly
+
+
+
+----------
+2015-08-12
+----------
+
 Version 0.3
 
 * Mastering pypi deployment
