@@ -11,6 +11,7 @@ from .settings import COMMON_PAGINATOR_PAGINATE_BY
 
 
 class SearchPlugin(CMSPluginBase):
+    cache = False
     model = CMSPlugin
     name = _("Search Form")
     render_template = "djangocms_search/search_results_plugin.html"
