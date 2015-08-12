@@ -43,7 +43,7 @@ setup(
     author='Iurii Garmash',
     author_email='garmon1@gmail.com',
     url='https://github.com/garmoncheg/djangocms-search',
-    packages=find_packages('djangocms_search'),
+    packages=find_packages(),
     package_data=package_data,
     install_requires=requirements,
     license='MTI',
