@@ -26,9 +26,9 @@ class SearchPlugin(CMSPluginBase):
         if query:
             queryset = form.search()
             #TODO: filter pages and titles (for the unique page usage)
-            queryset = queryset.filter()
-            for item in queryset:
-                print item.object
+            # queryset = queryset.filter()
+            # for item in queryset:
+            #     print item.object
             if not request.user.is_authenticated():
                 queryset = queryset.exclude(login_required=True)
             paginated = DiggPaginator(queryset, COMMON_PAGINATOR_PAGINATE_BY)
