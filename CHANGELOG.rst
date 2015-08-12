@@ -3,6 +3,14 @@
 2015-08-12
 ----------
 
+Version 0.3
+
+* Mastering pypi deployment
+
+----------
+2015-08-12
+----------
+
 Version 0.2
 
 * Fixed prints and todos
