@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: djangocms-search
-Version: 0.1
+Version: 0.2
 Summary: Search Plugin for django CMS
 Home-page: https://github.com/garmoncheg/djangocms-search
 Author: Iurii Garmash

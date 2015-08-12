@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from setuptools import setup
+from setuptools import find_packages
 from djangocms_search import __version__
 from pip.req import parse_requirements
 
@@ -31,7 +32,7 @@ setup(
     author='Iurii Garmash',
     author_email='garmon1@gmail.com',
     url='https://github.com/garmoncheg/djangocms-search',
-    packages=['djangocms_search', 'djangocms_search.migrations', ],
+    packages=find_packages('djangocms_search', 'djangocms_search.migrations', ),
     install_requires=requirements,
     license='MTI',
     platforms=['OS Independent'],
