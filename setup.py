@@ -44,7 +44,12 @@ setup(
     author_email='garmon1@gmail.com',
     url='https://github.com/garmoncheg/djangocms-search',
     packages=find_packages(),
-    package_data=package_data,
+    package_data={
+        'djangocms_search': [
+            'templates/*.html',
+            'templates/djangocms_search/*.html',
+        ], #TODO: this should be done automatically
+    },
     install_requires=requirements,
     license='MTI',
     platforms=['OS Independent'],
