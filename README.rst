@@ -33,6 +33,23 @@ Example (default setting):
 
  :code:`COMMON_PAGINATOR_PAGINATE_BY = 10` 
 
+Requirements
+~~~~~~~~~~~~
+
+This plugin depends on forked version of `aldryn-search <https://github.com/garmoncheg/aldryn-search>` it is updated to 0.2.8 and should be installed in order to be comartible with django-cms 3.x
+Follow haystack configuration of the Aldryn-search.
+Mine looks like (settings.py):
+
+    HAYSTACK_CONNECTIONS = {
+        'default': {
+            'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+            'PATH': os.path.join(PROJECT_PATH, 'whoosh_index'),
+        },
+    }
+    HAYSTACK_ROUTERS = ['aldryn_search.router.LanguageRouter', ]
+    ALDRYN_SEARCH_REGISTER_APPHOOK = False
+
+This should help register indexing properly. It is also modified to index pages along with titles. So installing this modified version will be required in order for pluin to work propery.
 
 Children
 ~~~~~~~~
