@@ -4,9 +4,12 @@ from setuptools import setup
 from setuptools import find_packages
 from djangocms_search import __version__
 from pip.req import parse_requirements
+import pip
 
-install_reqs = parse_requirements('requirements.txt')
-requirements = [str(ir.req) for ir in install_reqs]
+requirements = [
+    str(requirement.req)
+    for requirement in parse_requirements('requirements.txt', session=pip.download.PipSession())
+]
 
 template_patterns = [
     'templates/*.html',
@@ -37,7 +40,7 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='djangocms-search',
+    name='djangocms-search-redux',
     version=__version__,
     description='Search Plugin for django CMS',
     author='Iurii Garmash',
