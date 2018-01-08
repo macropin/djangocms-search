@@ -11,17 +11,6 @@ requirements = [
     for requirement in parse_requirements('requirements.txt', session=pip.download.PipSession())
 ]
 
-template_patterns = [
-    'templates/*.html',
-    'templates/*/*.html',
-    'templates/*/*/*.html',
-]
-
-package_data = dict(
-    (package_name, template_patterns)
-    for package_name in find_packages()
-)
-
 CLASSIFIERS = [
     'Development Status :: 5 - Production/Stable',
     'Environment :: Web Environment',
@@ -47,12 +36,6 @@ setup(
     author_email='garmon1@gmail.com',
     url='https://github.com/garmoncheg/djangocms-search',
     packages=find_packages(),
-    package_data={
-        'djangocms_search': [
-            'templates/*.html',
-            'templates/djangocms_search/*.html',
-        ], #TODO: this should be done automatically
-    },
     install_requires=requirements,
     license='MTI',
     platforms=['OS Independent'],
