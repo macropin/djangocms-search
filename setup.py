@@ -3,18 +3,7 @@
 from setuptools import setup
 from setuptools import find_packages
 from djangocms_search import __version__
-
-try: # for pip >= 10
-    from pip._internal.req import parse_requirements
-except ImportError: # for pip <= 9.0.3
-    from pip.req import parse_requirements
-
 import pip
-
-requirements = [
-    str(requirement.req)
-    for requirement in parse_requirements('requirements.txt', session=pip.download.PipSession())
-]
 
 CLASSIFIERS = [
     'Development Status :: 5 - Production/Stable',
@@ -41,8 +30,10 @@ setup(
     author_email='garmon1@gmail.com',
     url='https://github.com/garmoncheg/djangocms-search',
     packages=find_packages(),
-    install_requires=requirements,
-    license='MTI',
+    install_requires=[
+        'django-cms>=3.0',
+        'aldryn-search==0.2.8'
+    ],    license='MTI',
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
     long_description=open('README.rst').read(),
